@@ -28,12 +28,12 @@ class AdmissionDeadlines extends Component {
     componentDidMount() {
 
         const url = '/manage/service/api/program.deadlines/deadlines/id'
-        
+        const token = 'Bearer d144400b-bd7a-4552-9565-a947ad81f302'
         this.gatherParams();
 
         fetch(url, {
             headers: {
-                'Authorization': 'Bearer d144400b-bd7a-4552-9565-a947ad81f302'
+                'Authorization': token
             }
         })
             .then((response) => {
